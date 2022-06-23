@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+  def index
+    @products = Product.order(id: :desc)
+  end
+
   def new
     @product = Product.new
   end
@@ -9,6 +13,10 @@ class ProductsController < ApplicationController
     @product.save
 
     redirect_to products_path
+  end
+
+  def show
+
   end
 
   def product_params
