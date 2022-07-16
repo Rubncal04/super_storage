@@ -3,7 +3,7 @@
     <div class="mt-0">
         <label for="">Product: </label><%=product.name%><br>
         <label for="">Description: </label><%=product.description%><br>
-        <label for="">Price: </label><%=product.price == nil ? 0 : product.price%><br>
+        <label for="">Price: </label><%=product.price ? product.price : 0 %><br>
         <label for="">Current Storage: </label> <%=product.current_storage%><br>
         <%=link_to 'Edit', edit_product_path(product)%>
         <%=link_to 'Delete', product, method: :delete, data: {confirm: 'Are you Sure?'}%><br>
