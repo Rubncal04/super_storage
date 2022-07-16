@@ -11,11 +11,17 @@
       <div class="form-group">
         <%=form_for @product, local: true do |f|%>
         <%=f.label :code%><br>
-        <%=f.text_field :code, class: 'form-control'%><br>
+        <%=f.text_field :code, class: 'form-group'%><br>
         <%=f.label :name%><br>
-        <%=f.text_field :name, class: 'form-control'%><br>
+        <%=f.text_field :name, class: 'form-group'%><br>
         <%=f.label :description%><br>
-        <%=f.text_field :description, class: 'form-control'%><br>
+        <%=f.text_field :description, class: 'form-group'%><br>
+        <%=f.label :main_stotage%><br>
+        <%=f.number_field :main_stotage, class: 'form-group'%><br>
+        <%=f.label :current_storage%><br>
+        <%=f.number_field :current_storage, class: 'form-group'%><br>
+        <%=f.label :price%><br>
+        <%=f.number_field :price, class: 'form-group'%><br>
         <%=f.submit 'Send', :class =>"btn btn-outline-primary"%>
         <%end%>
       </div>
